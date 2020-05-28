@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using ApproximationNetworkNative;
 using System.IO;
@@ -8,17 +9,21 @@ using System.IO;
 namespace HybridNeuralNetwork
 {
     // Работа с главной нейронной сетью, которая обучается на входных данных и выдает конкретные значения скорости и времени задержки
-    class MainNetwork
+    public class MainNetwork:IDisposable
     {
         Network n_Net;
+        // Сеть обучена
+        bool b_TrainNet;
         public MainNetwork()
         {
             n_Net = new Network();
+            b_TrainNet = false;
         }
 
         // Метод обучения c учителем,входные параметры - число входов и выходов, выходной параметр - значения ошибок
-        public object TeacherTraining(int i_InputCount, int i_OutputCount, string s_FileInputTrainData, string s_FileOutputTrainData)
+        public  object TeacherTraining(int i_InputCount, int i_OutputCount, string s_FileInputTrainData, string s_FileOutputTrainData)
         {
+            b_TrainNet = false;
             // Обучение
             object[] o_Errors = n_Net.CreateAndTrainingNet(3,(object)i_InputCount, (object)i_OutputCount,
                 (object)s_FileInputTrainData,
@@ -36,6 +41,7 @@ namespace HybridNeuralNetwork
 
             // Ошибка после обучения
             double[,] d_AbsErrors = ((double[,])o_Errors[2]);
+            b_TrainNet = true;
 
             return new object[] { d_Performance, d_PerfErrors, d_AbsErrors };
         }
@@ -43,6 +49,10 @@ namespace HybridNeuralNetwork
         // Выполнение сети, входной параметр - массив входных значений, выходной параметр - массив выходных значений
         public double[] RunNet(double[] d_InputValues)
         {
+            if (!b_TrainNet)
+            {
+                throw new ApplicationException("Neural network not trained, train it in monitoring tools.");
+            }
             object o_Res = n_Net.RunNet((object)d_InputValues);
             double[,] d_Res = (double[,])o_Res;
             double[] d_OutputValues = new double[d_Res.GetUpperBound(1)+1];
@@ -76,6 +86,12 @@ namespace HybridNeuralNetwork
             }
             return d_Result;
         }
-
+        public void Dispose()
+        {
+            if (n_Net != null)
+            {
+                n_Net.Dispose();
+            }
+        }
     }
 }
