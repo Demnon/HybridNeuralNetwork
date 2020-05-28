@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.menuStripMain = new System.Windows.Forms.MenuStrip();
             this.c_SetUpMonitoringToolsMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.c_RunMonitoringMenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,12 +46,12 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.t_NetworkStatusPanel = new System.Windows.Forms.TableLayoutPanel();
             this.d_InputTable = new System.Windows.Forms.DataGridView();
-            this.c_DateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.с_InputNameColunm = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_DateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.c_InputValueColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.p_NetworkStatusPanel = new System.Windows.Forms.Panel();
-            this.p_MonitoringStatusPanel = new System.Windows.Forms.Panel();
             this.c_Graph = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.p_MonitoringStatusPanel = new System.Windows.Forms.Panel();
             this.menuStripMain.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -114,6 +114,7 @@
             this.c_OpenMonitoringLogMenu.Name = "c_OpenMonitoringLogMenu";
             this.c_OpenMonitoringLogMenu.Size = new System.Drawing.Size(160, 36);
             this.c_OpenMonitoringLogMenu.Text = "Open monitoring log";
+            this.c_OpenMonitoringLogMenu.Click += new System.EventHandler(this.c_OpenMonitoringLogMenu_Click);
             // 
             // c_ExitMenu
             // 
@@ -183,8 +184,8 @@
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.27087F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.72913F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.58859F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 78.41141F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(784, 491);
             this.tableLayoutPanel2.TabIndex = 7;
@@ -202,8 +203,8 @@
             this.t_NetworkStatusPanel.Name = "t_NetworkStatusPanel";
             this.t_NetworkStatusPanel.RowCount = 1;
             this.t_NetworkStatusPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.t_NetworkStatusPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 233F));
-            this.t_NetworkStatusPanel.Size = new System.Drawing.Size(784, 182);
+            this.t_NetworkStatusPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 182F));
+            this.t_NetworkStatusPanel.Size = new System.Drawing.Size(784, 105);
             this.t_NetworkStatusPanel.TabIndex = 0;
             // 
             // d_InputTable
@@ -215,28 +216,28 @@
             this.d_InputTable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(241)))), ((int)(((byte)(250)))));
             this.d_InputTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.d_InputTable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(241)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.d_InputTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(241)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.d_InputTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.d_InputTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.d_InputTable.ColumnHeadersVisible = false;
             this.d_InputTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.c_DateColumn,
             this.с_InputNameColunm,
+            this.c_DateColumn,
             this.c_InputValueColumn});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(241)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.d_InputTable.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(241)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.d_InputTable.DefaultCellStyle = dataGridViewCellStyle4;
             this.d_InputTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.d_InputTable.EnableHeadersVisualStyles = false;
             this.d_InputTable.Location = new System.Drawing.Point(3, 0);
@@ -244,20 +245,20 @@
             this.d_InputTable.Name = "d_InputTable";
             this.d_InputTable.RowHeadersVisible = false;
             this.d_InputTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.d_InputTable.Size = new System.Drawing.Size(386, 182);
+            this.d_InputTable.Size = new System.Drawing.Size(386, 105);
             this.d_InputTable.TabIndex = 4;
-            // 
-            // c_DateColumn
-            // 
-            this.c_DateColumn.HeaderText = "Время";
-            this.c_DateColumn.Name = "c_DateColumn";
-            this.c_DateColumn.ReadOnly = true;
             // 
             // с_InputNameColunm
             // 
             this.с_InputNameColunm.HeaderText = "Имя входного параметра";
             this.с_InputNameColunm.Name = "с_InputNameColunm";
             this.с_InputNameColunm.ReadOnly = true;
+            // 
+            // c_DateColumn
+            // 
+            this.c_DateColumn.HeaderText = "Время";
+            this.c_DateColumn.Name = "c_DateColumn";
+            this.c_DateColumn.ReadOnly = true;
             // 
             // c_InputValueColumn
             // 
@@ -271,9 +272,39 @@
             this.p_NetworkStatusPanel.Location = new System.Drawing.Point(392, 0);
             this.p_NetworkStatusPanel.Margin = new System.Windows.Forms.Padding(0);
             this.p_NetworkStatusPanel.Name = "p_NetworkStatusPanel";
-            this.p_NetworkStatusPanel.Size = new System.Drawing.Size(392, 182);
+            this.p_NetworkStatusPanel.Size = new System.Drawing.Size(392, 105);
             this.p_NetworkStatusPanel.TabIndex = 5;
             this.p_NetworkStatusPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.p_NetworkStatusPanel_Paint);
+            // 
+            // c_Graph
+            // 
+            this.c_Graph.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(241)))), ((int)(((byte)(250)))));
+            chartArea2.AxisX.MajorGrid.LineColor = System.Drawing.Color.Gray;
+            chartArea2.AxisY.MajorGrid.LineColor = System.Drawing.Color.Gray;
+            chartArea2.Name = "ChartArea1";
+            this.c_Graph.ChartAreas.Add(chartArea2);
+            this.c_Graph.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.c_Graph.Location = new System.Drawing.Point(3, 108);
+            this.c_Graph.Name = "c_Graph";
+            series2.BorderWidth = 2;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StepLine;
+            series2.Color = System.Drawing.Color.Black;
+            series2.Legend = "Legend1";
+            series2.MarkerBorderWidth = 2;
+            series2.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Square;
+            series2.Name = "Values";
+            series2.YValuesPerPoint = 2;
+            this.c_Graph.Series.Add(series2);
+            this.c_Graph.Size = new System.Drawing.Size(778, 380);
+            this.c_Graph.TabIndex = 1;
+            this.c_Graph.Text = "chart1";
+            title2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(209)))));
+            title2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            title2.ForeColor = System.Drawing.Color.White;
+            title2.Name = "Title1";
+            title2.Text = "Network status in time (Y = 1 - Normal work; Y = 2 - Overload; Y = 3 - Failure)";
+            this.c_Graph.Titles.Add(title2);
             // 
             // p_MonitoringStatusPanel
             // 
@@ -283,36 +314,6 @@
             this.p_MonitoringStatusPanel.Name = "p_MonitoringStatusPanel";
             this.p_MonitoringStatusPanel.Size = new System.Drawing.Size(70, 40);
             this.p_MonitoringStatusPanel.TabIndex = 8;
-            // 
-            // c_Graph
-            // 
-            this.c_Graph.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(241)))), ((int)(((byte)(250)))));
-            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.Gray;
-            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.Gray;
-            chartArea1.Name = "ChartArea1";
-            this.c_Graph.ChartAreas.Add(chartArea1);
-            this.c_Graph.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.c_Graph.Location = new System.Drawing.Point(3, 185);
-            this.c_Graph.Name = "c_Graph";
-            series1.BorderWidth = 2;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StepLine;
-            series1.Color = System.Drawing.Color.Black;
-            series1.Legend = "Legend1";
-            series1.MarkerBorderWidth = 2;
-            series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Square;
-            series1.Name = "Values";
-            series1.YValuesPerPoint = 2;
-            this.c_Graph.Series.Add(series1);
-            this.c_Graph.Size = new System.Drawing.Size(778, 303);
-            this.c_Graph.TabIndex = 1;
-            this.c_Graph.Text = "chart1";
-            title1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(209)))));
-            title1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            title1.ForeColor = System.Drawing.Color.White;
-            title1.Name = "Title1";
-            title1.Text = "Network status in time (Y = 1 - Normal work; Y = 2 - Overload; Y = 3 - Failure)";
-            this.c_Graph.Titles.Add(title1);
             // 
             // MainForm
             // 
@@ -357,12 +358,12 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel t_NetworkStatusPanel;
         private System.Windows.Forms.DataGridView d_InputTable;
-        private System.Windows.Forms.DataGridViewTextBoxColumn c_DateColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn с_InputNameColunm;
-        private System.Windows.Forms.DataGridViewTextBoxColumn c_InputValueColumn;
         private System.Windows.Forms.Panel p_NetworkStatusPanel;
         private System.Windows.Forms.Panel p_MonitoringStatusPanel;
         private System.Windows.Forms.DataVisualization.Charting.Chart c_Graph;
+        private System.Windows.Forms.DataGridViewTextBoxColumn с_InputNameColunm;
+        private System.Windows.Forms.DataGridViewTextBoxColumn c_DateColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn c_InputValueColumn;
     }
 }
 

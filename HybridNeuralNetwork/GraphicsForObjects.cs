@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -33,7 +30,7 @@ namespace HybridNeuralNetwork
         }
 
         // Рисование состояния сети на заданном объекте для заданных значений
-        public static void DrawingStatusNetwork(Control c_Object, int[] d_ValueOutput, string[] s_NameOutput,Color[] c_Colors)
+        public static void DrawingStatusNetwork(Control c_Object, double[] d_ValueOutput, string[] s_NameOutput,Color[] c_Colors)
         {
             if (d_ValueOutput.Length!=s_NameOutput.Length||c_Colors.Length!=d_ValueOutput.Length)
             {

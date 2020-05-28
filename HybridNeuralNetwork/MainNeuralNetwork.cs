@@ -1,23 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using ApproximationNetworkNative;
-using System.IO;
 
 namespace HybridNeuralNetwork
 {
     // Работа с главной нейронной сетью, которая обучается на входных данных и выдает конкретные значения скорости и времени задержки
-    public class MainNetwork:IDisposable
+    public class MainNeuralNetwork:IDisposable
     {
         Network n_Net;
         // Сеть обучена
         bool b_TrainNet;
-        public MainNetwork()
+        public MainNeuralNetwork()
         {
             n_Net = new Network();
             b_TrainNet = false;
+        }
+
+        public bool GetTrainNet
+        {
+            get { return b_TrainNet; }
         }
 
         // Метод обучения c учителем,входные параметры - число входов и выходов, выходной параметр - значения ошибок
@@ -48,11 +48,7 @@ namespace HybridNeuralNetwork
 
         // Выполнение сети, входной параметр - массив входных значений, выходной параметр - массив выходных значений
         public double[] RunNet(double[] d_InputValues)
-        {
-            if (!b_TrainNet)
-            {
-                throw new ApplicationException("Neural network not trained, train it in monitoring tools.");
-            }
+        {           
             object o_Res = n_Net.RunNet((object)d_InputValues);
             double[,] d_Res = (double[,])o_Res;
             double[] d_OutputValues = new double[d_Res.GetUpperBound(1)+1];

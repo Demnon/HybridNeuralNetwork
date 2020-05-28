@@ -152,14 +152,14 @@
             series1.Color = System.Drawing.Color.Blue;
             series1.Legend = "Legend1";
             series1.MarkerBorderWidth = 2;
-            series1.Name = "Delay time";
+            series1.Name = "Delay time, ms";
             series1.YValuesPerPoint = 2;
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series2.Color = System.Drawing.Color.Red;
             series2.Legend = "Legend1";
             series2.MarkerBorderWidth = 2;
-            series2.Name = "Average transfer speed";
+            series2.Name = "Average transfer speed, bps";
             this.c_GraphAbsErrors.Series.Add(series1);
             this.c_GraphAbsErrors.Series.Add(series2);
             this.c_GraphAbsErrors.Size = new System.Drawing.Size(778, 216);

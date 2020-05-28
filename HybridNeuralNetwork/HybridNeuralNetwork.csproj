@@ -43,8 +43,14 @@
     <Reference Include="dotNetRDF.Core">
       <HintPath>..\..\Dataset и библиотеки\dotNetRDF.Core.dll</HintPath>
     </Reference>
+    <Reference Include="EPPlus, Version=5.1.2.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.5.1.2\lib\net40\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DataVisualization, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Chart.Controls.4.7.2046\lib\net35\System.Web.DataVisualization.dll</HintPath>
       <Private>True</Private>
@@ -78,14 +84,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataKnowledgeNet.cs" />
+    <Compile Include="ExcelLog.cs" />
     <Compile Include="GraphicsForObjects.cs" />
+    <Compile Include="JobKnowledgeNet.cs" />
+    <Compile Include="KnowledgeBase.cs" />
+    <Compile Include="KnowledgeBase.Requests.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainNetwork.cs" />
+    <Compile Include="MainNeuralNetwork.cs" />
+    <Compile Include="Monitoring.cs" />
+    <Compile Include="OperationsWithMatrix.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SetUpMonitoringToolsForm.cs">
